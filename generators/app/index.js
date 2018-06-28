@@ -2,10 +2,13 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const mkdirp = require('mkdirp');
+const commandExists = require('command-exists');
 
 module.exports = class extends Generator {
+  initializing() {}
+
   prompting() {
-    // Have Yeoman greet the user.
     this.log(
       yosay(`Welcome to the striking ${chalk.red('generator-easy-npm-tpl')} generator!`)
     );
@@ -50,13 +53,47 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    let { projectName, projectDesc, projectAuthor, projectLicense } = this.props;
+    mkdirp.sync(`${projectName}`);
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath(`${projectName}/package.json`),
+      {
+        projectName: projectName,
+        projectDesc: projectDesc,
+        projectAuthor: projectAuthor,
+        projectLicense: projectLicense
+      }
+    );
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('_README.md'),
+      this.destinationPath(`${projectName}/README.md`)
+    );
+    this.fs.copy(
+      this.templatePath('_.gitignore'),
+      this.destinationPath(`${projectName}/.gitignore`)
+    );
+    this.fs.copy(
+      this.templatePath('index.js'),
+      this.destinationPath(`${projectName}/bin/index.js`)
+    );
+    this.fs.copy(
+      this.templatePath('main.js'),
+      this.destinationPath(`${projectName}/lib/main.js`)
     );
   }
 
   install() {
-    this.installDependencies();
+    const hasYarn = commandExists('yarn');
+    this.installDependencies({
+      npm: !hasYarn,
+      bower: false,
+      yarn: hasYarn,
+      skipMessage: false
+    });
+  }
+
+  end() {
+    console.log('Everything is ready!');
   }
 };

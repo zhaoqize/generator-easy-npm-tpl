@@ -1,0 +1,17 @@
+{
+  "name": "<%= projectName %>",
+  "version": "1.0.0",
+  "description": "<%= projectDesc %>",
+  "main": "index.js",
+  "author": "<%= projectAuthor %>",
+  "keywords": ["easy", "generator", "tpl"],
+  "license": "<%= projectLicense %>",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "execa": "^0.10.0",
+    "inquirer": "^5.2.0",
+    "progress": "^2.0.0",
+    "signale": "^1.0.1"
+  }
+}
