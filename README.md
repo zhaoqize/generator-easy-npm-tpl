@@ -1,8 +1,8 @@
+[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 # generator-easy-npm-tpl
-> 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+一个生成指定 npm 包目录结构的 generator
 
-## Installation
+## 安装
 
 First, install [Yeoman](http://yeoman.io) and generator-easy-npm-tpl using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
@@ -17,7 +17,7 @@ Then generate your new project:
 yo easy-npm-tpl
 ```
 
-## Getting To Know Yeoman
+## 关于 Yeoman
 
  * Yeoman has a heart of gold.
  * Yeoman is a person with feelings and opinions, but is very easy to work with.
