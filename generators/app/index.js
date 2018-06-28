@@ -28,9 +28,9 @@ module.exports = class extends Generator {
       },
       {
         type: 'input',
-        name: 'projectMain',
-        message: 'Main file (app.js):',
-        default: 'app.js'
+        name: 'commander',
+        message: 'How to run:',
+        default: 'easy <commander>'
       },
       {
         type: 'input',
@@ -53,7 +53,13 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    let { projectName, projectDesc, projectAuthor, projectLicense } = this.props;
+    let {
+      projectName,
+      projectDesc,
+      projectAuthor,
+      projectLicense,
+      commander
+    } = this.props;
     mkdirp.sync(`${projectName}`);
     this.fs.copyTpl(
       this.templatePath('_package.json'),
@@ -65,9 +71,13 @@ module.exports = class extends Generator {
         projectLicense: projectLicense
       }
     );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('_README.md'),
-      this.destinationPath(`${projectName}/README.md`)
+      this.destinationPath(`${projectName}/README.md`),
+      {
+        projectName: projectName,
+        commander: commander
+      }
     );
     this.fs.copy(
       this.templatePath('_.gitignore'),

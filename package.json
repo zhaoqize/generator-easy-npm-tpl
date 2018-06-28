@@ -1,19 +1,19 @@
 {
   "name": "generator-easy-npm-tpl",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
-  "homepage": "",
+  "homepage": "https://github.com/zhaoqize/generator-easy-npm-tpl",
   "author": {
     "name": "zhaoqize",
     "email": "zhaoqize@meituan.com",
-    "url": ""
+    "url": "https://github.com/zhaoqize"
   },
   "files": [
     "generators"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
+    "generator",
     "yeoman-generator"
   ],
   "devDependencies": {

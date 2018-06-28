@@ -13,7 +13,7 @@ npm install -g generator-easy-npm-tpl
 Then generate your new project:
 
 ```bash
-yo study
+yo easy-npm-tpl
 ```
 
 ## Getting To Know Yeoman

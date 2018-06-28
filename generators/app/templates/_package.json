@@ -6,6 +6,9 @@
   "author": "<%= projectAuthor %>",
   "keywords": ["easy", "generator", "tpl"],
   "license": "<%= projectLicense %>",
+  "bin": {
+    "easy": "bin/index.js"
+  },
   "readmeFilename": "README.md",
   "dependencies": {
     "commander": "^2.15.1",
