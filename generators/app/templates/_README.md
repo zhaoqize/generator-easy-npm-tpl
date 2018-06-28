@@ -1,4 +1,4 @@
-[![GitHub license](https://img.shields.io/github/license/zhaoqize/<%= projectName %>.svg)](https://github.com/zhaoqize/easy-rollback/blob/master/LICENSE)
+[![NPM version][npm-image]][npm-url] [![GitHub license](https://img.shields.io/github/license/zhaoqize/<%= projectName %>.svg)](https://github.com/zhaoqize/easy-rollback/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 # <%= projectName %>
 <%= projectName %>
@@ -23,5 +23,9 @@ npm install <%= projectName %>
     -h, --help  output usage information
 
   Commands:
-    
+
 ```
+
+## License
+
+MIT © [zhaoqize]()
