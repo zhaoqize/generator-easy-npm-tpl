@@ -1,4 +1,4 @@
-[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![npm](https://img.shields.io/npm/v/generator-easy-npm-tpl.svg?style=flat)](https://github.com/zhaoqize/generator-easy-npm-tpl)
 # generator-easy-npm-tpl
 一个生成指定 npm 包目录结构的 generator
 
