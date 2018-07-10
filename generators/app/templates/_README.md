@@ -3,13 +3,12 @@
 # <%= projectName %>
 <%= projectName %>
 
-# 使用
-安装
+### 安装
 ```js
-npm install <%= projectName %>
+npm install -g <%= projectName %>
 ```
 
-使用
+### 使用
 ```js
 <%= commander %>
 ```
@@ -26,6 +25,6 @@ npm install <%= projectName %>
 
 ```
 
-## License
+### License
 
 MIT © [zhaoqize]()
